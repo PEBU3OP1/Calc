@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
-        Dialog.resize(660, 581)
+        Dialog.setFixedSize(660, 581)
         Dialog.setStyleSheet("QPushButton{\n"
 "background-color: white;\n"
 "width:75px;\n"
@@ -286,6 +286,7 @@ class Ui_Dialog(object):
         self.pushButton_21.setText(_translate("Dialog", "Вычислить"))
         self.label_10.setText(_translate("Dialog", ""))
         self.label_11.setText(_translate("Dialog", ""))
+
 
 
 

@@ -1,7 +1,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 from calc_intrface import Ui_Dialog
-from math_logic import Equals
+from math_logic import Equals, Complex
 import math
 
 # create application
@@ -38,16 +38,19 @@ ui.pushButton_10.clicked.connect(lambda: Ninput(0))
 ui.pushButton_11.clicked.connect(lambda: Ninput("."))
 ui.pushButton_12.clicked.connect(lambda: ui.label_10.setText(str(Equals(ui.label_11.text()))))
 ui.pushButton_12.clicked.connect(ui.label_11.clear)
-ui.pushButton_13.clicked.connect(lambda: Ninput("*"))
-ui.pushButton_14.clicked.connect(lambda: Ninput("/"))
-ui.pushButton_15.clicked.connect(lambda: Ninput("-"))
-ui.pushButton_16.clicked.connect(lambda: Ninput("+"))
+ui.pushButton_13.clicked.connect(lambda: Ninput(" * " ))
+ui.pushButton_14.clicked.connect(lambda: Ninput(" / "))
+ui.pushButton_15.clicked.connect(lambda: Ninput(" - "))
+ui.pushButton_16.clicked.connect(lambda: Ninput(" + "))
 ui.pushButton_17.clicked.connect(ui.label_11.clear)
 ui.pushButton_17.clicked.connect(ui.label_10.clear)
 ui.pushButton_18.clicked.connect(lambda: Delete())
-ui.pushButton_19.clicked.connect(lambda: Ninput(str(round(math.pi,5))))
+ui.pushButton_19.clicked.connect(lambda: Ninput(str(round(math.pi, 5))))
 ui.pushButton_20.clicked.connect(lambda: ui.label_10.setText(str(math.log2(int(ui.label_11.text())))))
 ui.pushButton_20.clicked.connect(ui.label_11.clear)
+ui.pushButton_21.clicked.connect(lambda: ui.label_10.setText(str(Complex(ui.lineEdit_2.text(),ui.lineEdit_3.text(),
+                                                                         ui.lineEdit_5.text(),ui.lineEdit_4.text(),
+                                                                         ui.comboBox.currentIndex()))))
 
 
 
